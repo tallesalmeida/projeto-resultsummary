@@ -1,0 +1,229 @@
+/*## Colors
+
+### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+
+### Notes
+
+Use transparency to get the colour variations necessary to match the design. Hint: look into using `hsla()`.
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraphs): 18px
+
+### Font
+
+- Family: [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk)
+- Weights: 500, 700, 800*/
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    max-width: 510px;
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.199);
+    display: flex;
+    border-radius: 20px;
+}
+
+.result {
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+    background-image:linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+.result > h1 {
+    color: hsl(241, 100%, 89%);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.result .circle {
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 100px;
+    width: 150px;
+    padding: 35px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#circle-num1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#circle-num2 {
+    color: hsla(241, 100%, 89%, 0.438);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.result > h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.result > p {
+    color: hsl(241, 100%, 89%);
+    font-size: 13px;
+}
+
+.summary {
+    padding: 30px;
+}
+
+.summary > h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.summary-p1 {
+    background-color: hsla(0, 100%, 67%, 0.144);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#reaction {
+    color: hsl(0, 100%, 67%);
+    font-weight: 900;
+    font-size: 13px;
+    margin-right: 50px;
+    margin-left: 5px;
+    
+}
+
+#reaction-num {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.summary-p2 {
+    background-color: hsla(39, 100%, 56%, 0.068);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#memory {
+    color: hsl(39, 100%, 56%);
+    font-weight: 900;
+    font-size: 13px;
+    margin-right: 52px;
+    margin-left: 5px;
+}
+
+#memory-num {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.summary-p3 {
+    background-color: hsla(166, 100%, 37%, 0.116);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#verbal {
+    color: hsl(166, 100%, 37%);
+    font-weight: 500;
+    font-size: 13px;
+    margin-right: 63px;
+    margin-left: 5px;
+}
+
+#verbal-num {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.summary-p4 {
+    background-color: hsla(224, 30%, 27%, 0.055);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#visual {
+    color: hsl(234, 85%, 45%);
+    font-weight: 900;
+    font-size: 13px;
+    margin-right: 63px;
+    margin-left: 5px;
+}
+
+#visual-num {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+button {
+    text-decoration: none;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    padding: 13px;
+    border-radius: 20px;
+    width: 200px;
+    margin-top: 35px;
+    border-width: 0px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
