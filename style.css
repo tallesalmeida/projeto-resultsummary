@@ -133,7 +133,6 @@ main {
     font-size: 13px;
     margin-right: 50px;
     margin-left: 5px;
-    
 }
 
 #reaction-num {
@@ -227,3 +226,20 @@ button {
 button:hover {
     background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
 }
+
+
+@media screen and (max-width: 540px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    .result {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+}
+
