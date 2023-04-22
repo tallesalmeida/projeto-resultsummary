@@ -60,25 +60,20 @@ body {
     height: 100vh;
 }
 
-main {
-    width: 100%;
-    height: 100%;
-}
 
 .result {
     background-image:linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 1.56rem;
+    border-bottom-right-radius: 1.56rem;
     padding-top: 1.4rem;
     padding-bottom: 1.8rem;
 }
 
 .result > h1 {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: hsl(241, 100%, 89%);
     font-weight: 500;
     margin-bottom: 1.4rem;
@@ -86,9 +81,9 @@ main {
 
 .result-circle {
     background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    border-radius: 100px;
-    width: 125px;
-    padding: 24px;
+    border-radius: 6.25rem;
+    width: 7.8rem;
+    padding: 1.5rem;
     text-align: center;
 }
 
@@ -105,7 +100,7 @@ main {
 
 .result-words {
     margin-top: 1rem;
-    width: 54%;
+    width: 70%;
     text-align: center;
 }
 
@@ -123,15 +118,16 @@ main {
 }
 
 .summary {
-    padding: 1.5rem;
+    padding: 1.4rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.75rem;
 }
 
 .summary > h1 {
     font-size: 1.2rem;
     color: hsl(224, 30%, 27%);
+    margin-bottom: 0.5rem;
 }
 
 .reaction {
@@ -139,7 +135,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8rem;
+    padding: 1rem;
     border-radius: 0.6rem;
 }
 
@@ -156,7 +152,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8rem;
+    padding: 1rem;
     border-radius: 0.6rem;
 }
 
@@ -173,7 +169,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8rem;
+    padding: 1rem;
     border-radius: 0.6rem;
 }
 
@@ -190,7 +186,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8rem;
+    padding: 1rem;
     border-radius: 0.6rem;
 }
 
@@ -202,4 +198,111 @@ main {
     font-size: 1rem;
 }
 
-@media screen and (min-width: 520px)
+button {
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 1.7rem;
+    padding: 1rem;
+    border-style: none;
+    color: hsl(221, 100%, 96%);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-image:linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+@media screen and (min-width: 520px) {
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.199);
+        border-radius: 20px;
+        max-width: 800px;
+        max-height: 800px;
+    }
+
+    .result {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 250px;
+        justify-content: center;
+        height: 350px;
+    }
+
+    .result > h1 {
+        font-size: 1rem;
+    }
+
+    .result-words {
+        margin-top: 1.6rem;
+    }
+
+    .result-words > h2 {
+        font-size: 1.3rem;
+    }
+
+    .summary {
+        height: 350px;
+        width: 250px;
+        padding: 1rem;
+    }
+
+    .summary > h1 {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .reaction > div {
+        font-size: 13px;
+        align-items: center;
+    }
+
+    .reaction {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .memory {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .memory > div {
+        font-size: 13px;
+        align-items: center;
+    }
+
+    .verbal {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .verbal > div {
+        font-size: 13px;
+        align-items: center;
+    }
+
+    .visual {
+        font-size: 13px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .visual > div {
+        font-size: 13px;
+        align-items: center;
+    }
+
+    button {
+        padding: 0.7rem;
+        font-size: 0.7rem;
+    }
+}
