@@ -36,7 +36,15 @@ Use transparency to get the colour variations necessary to match the design. Hin
 ### Font
 
 - Family: [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk)
-- Weights: 500, 700, 800*/
+- Weights: 500, 700, 800
+
+
+background-image:linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%)); gradiente da parte do resultado e do botão "continue"
+background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0)); gradiente do círculo
+box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.199); do main
+*/
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
@@ -50,196 +58,148 @@ body {
     font-family: 'Hanken Grotesk', sans-serif;
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 main {
-    max-width: 510px;
-    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.199);
-    display: flex;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 .result {
-    border-radius: 20px;
-    text-align: center;
-    padding: 30px;
     background-image:linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-top: 1.4rem;
+    padding-bottom: 1.8rem;
 }
 
 .result > h1 {
-    color: hsl(241, 100%, 89%);
     font-size: 18px;
+    color: hsl(241, 100%, 89%);
     font-weight: 500;
-    margin-bottom: 25px;
+    margin-bottom: 1.4rem;
 }
 
-.result .circle {
+.result-circle {
     background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     border-radius: 100px;
-    width: 150px;
-    padding: 35px;
-    margin: auto;
-    margin-bottom: 20px;
+    width: 125px;
+    padding: 24px;
+    text-align: center;
 }
 
-#circle-num1 {
-    color: hsl(0, 0%, 100%);
-    font-size: 50px;
+#result-circle-76 {
+    font-size: 2.9rem;
+    color: white;
+    font-weight: 900;
+}
+
+#result-circle-100 {
+    color: hsla(241, 100%, 89%, 0.473);
+    font-size: 0.8rem;
+}
+
+.result-words {
+    margin-top: 1rem;
+    width: 54%;
+    text-align: center;
+}
+
+.result-words > h2 {
+    color: hsl(221, 100%, 96%);
     font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-#circle-num2 {
-    color: hsla(241, 100%, 89%, 0.438);
-    font-weight: 500;
-    font-size: 12px;
-}
-
-.result > h2 {
-    color: hsl(0, 0%, 100%);
-    font-weight: 500;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.result > p {
+.result-words > p {
     color: hsl(241, 100%, 89%);
-    font-size: 13px;
+    font-size: .8rem;
+    font-weight: 500;
 }
 
 .summary {
-    padding: 30px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .summary > h1 {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: hsl(224, 30%, 27%);
 }
 
-.summary-p1 {
-    background-color: hsla(0, 100%, 67%, 0.144);
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
 }
 
-#reaction {
+.reaction > div {
     color: hsl(0, 100%, 67%);
-    font-weight: 900;
-    font-size: 13px;
-    margin-right: 50px;
-    margin-left: 5px;
-}
-
-#reaction-num {
-    font-size: 13px;
-    font-weight: 900;
-}
-
-.summary-p2 {
-    background-color: hsla(39, 100%, 56%, 0.068);
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
     display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-#memory {
-    color: hsl(39, 100%, 56%);
-    font-weight: 900;
-    font-size: 13px;
-    margin-right: 52px;
-    margin-left: 5px;
-}
-
-#memory-num {
-    font-size: 13px;
-    font-weight: 900;
-}
-
-.summary-p3 {
-    background-color: hsla(166, 100%, 37%, 0.116);
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-#verbal {
-    color: hsl(166, 100%, 37%);
-    font-weight: 500;
-    font-size: 13px;
-    margin-right: 63px;
-    margin-left: 5px;
-}
-
-#verbal-num {
-    font-size: 13px;
-    font-weight: 900;
-}
-
-.summary-p4 {
-    background-color: hsla(224, 30%, 27%, 0.055);
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-#visual {
-    color: hsl(234, 85%, 45%);
-    font-weight: 900;
-    font-size: 13px;
-    margin-right: 63px;
-    margin-left: 5px;
-}
-
-#visual-num {
-    font-size: 13px;
-    font-weight: 900;
-}
-
-button {
-    text-decoration: none;
-    background-color: hsl(224, 30%, 27%);
-    color: hsl(0, 0%, 100%);
-    padding: 13px;
-    border-radius: 20px;
-    width: 200px;
-    margin-top: 35px;
-    border-width: 0px;
-    font-size: 12px;
+    gap: 0.7rem;
     font-weight: 700;
-    cursor: pointer;
+    font-size: 1rem;
 }
 
-button:hover {
-    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.192);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
 }
 
-
-@media screen and (max-width: 520px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        border-radius: 0px;
-    }
-
-    .result {
-        border-top-right-radius: 0px;
-        border-top-left-radius: 0px;
-    }
+.memory > div {
+    color: hsl(39, 100%, 56%);
+    display: flex;
+    gap: 0.7rem;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.212);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+}
+
+.verbal > div {
+    color: hsl(166, 100%, 37%);
+    display: flex;
+    gap: 0.7rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.199);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+}
+
+.visual > div {
+    color: hsl(234, 85%, 45%);
+    display: flex;
+    gap: 0.7rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 520px)
